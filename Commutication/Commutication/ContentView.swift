@@ -10,7 +10,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("You have been hacked ")
+        
+            VStack{
+                Text("Commutication")
+                    .font(.title)
+                    .bold()
+                TabView {
+                    mainView()
+                        .tabItem {
+                            Image(systemName: "1.square.fill")
+                            Text("Home")
+                        }
+                    statsView()
+                        .tabItem {
+                            Image(systemName: "2.square.fill")
+                            Text("Stats")
+                        }
+                    destinationView()
+                        .tabItem {
+                            Image(systemName: "3.square.fill")
+                            Text("Third")
+                        }
+                }
+                .font(.headline)
+            }
+        
     }
 }
 
