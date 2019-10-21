@@ -8,15 +8,22 @@
 
 import SwiftUI
 
-struct Item: dest {
+struct dest: Identifiable {
     var id: Int
     var name: String
     var location: String
 }
 
 
-
 struct destinationView: View {
+    
+    var test : Bool = false
+    
+    func createDestination() -> Void{
+        print("This works")
+        //test = true
+    }
+    
     
     var body: some View {
         
@@ -28,26 +35,23 @@ struct destinationView: View {
                 Text("Destination").font(.headline)
                 Text("Placeholder 1")
                 Text("Placeholder 2")
+                if(test){
+                    Text("You just entered some text")
+                }
             }
                 
             HStack{
-                Text("Enter another place: ")
-                TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                Button(action: {self.createDestination()}) {
-                    Text("Add to list")
+                Text("Add Places")
+                Button(action: { self.createDestination() }) {
+                    Text("GO")
                 }
-                Spacer()
-            }
+            }.padding()
                 
             Spacer()
             
         }
     }
     
-    func createDestination() -> Void{
-        
-        
-    }
     
 }
 

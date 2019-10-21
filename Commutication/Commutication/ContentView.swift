@@ -12,24 +12,29 @@ struct ContentView: View {
     var body: some View {
         
             VStack{
+                HStack{
                 Text("Commutication")
                     .font(.title)
                     .bold()
+                    .foregroundColor(.green)
+                Image("logo")
+                    
+                }
                 TabView {
                     mainView()
                         .tabItem {
-                            Image(systemName: "1.square.fill")
+                            Image("home")
                             Text("Home")
                         }
                     statsView()
                         .tabItem {
-                            Image(systemName: "2.square.fill")
+                            Image("bike")
                             Text("Stats")
                         }
                     destinationView()
                         .tabItem {
-                            Image(systemName: "3.square.fill")
-                            Text("Third")
+                            Image("nav")
+                            Text("Destinations")
                         }
                 }
                 .font(.headline)

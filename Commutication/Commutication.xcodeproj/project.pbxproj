@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -174,7 +174,7 @@
 				};
 			};
 			buildConfigurationList = 9F415146235CCAC900FB5FF2 /* Build configuration list for PBXProject "Commutication" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -376,8 +376,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Commutication/Preview Content\"";
+				DEVELOPMENT_TEAM = 4QC73UKNQH;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Commutication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -395,8 +397,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Commutication/Preview Content\"";
+				DEVELOPMENT_TEAM = 4QC73UKNQH;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Commutication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

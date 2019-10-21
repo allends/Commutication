@@ -8,9 +8,32 @@
 
 import SwiftUI
 
+
 struct mainView: View {
     var body: some View {
-        Text("Home")
+        VStack{
+            Text("Today View").font(.title)
+            HStack{
+                Text("Class")
+                Spacer()
+                Text("Location")
+                Spacer()
+                Text("Time")
+            }.padding(15)
+            
+            List {
+                
+                HStack{
+                    Text("Class1")
+                    Spacer()
+                    Text("Hickman Hall")
+                    Spacer()
+                    Text("5:00")
+                }.font(.body)
+                
+            }
+                
+        }
     }
 }
 
