@@ -8,36 +8,44 @@
 
 import SwiftUI
 
+struct Item: dest {
+    var id: Int
+    var name: String
+    var location: String
+}
+
+
+
 struct destinationView: View {
-    
-    struct destination{
-        var name: String
-        var time: Int
-    }
-    
     
     var body: some View {
         
         VStack{
             Text("You have places to go!").font(.headline)
             Spacer()
-            Text("Sample Destination 1").font(.body)
             
-            HStack{
-                Text("Enter a destination: ")
-                
-                TextField("Name Here", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                
-                Button(action: { }) {
-                    Text("Enter")
-                }
+            List{
+                Text("Destination").font(.headline)
+                Text("Placeholder 1")
+                Text("Placeholder 2")
             }
+                
+            HStack{
+                Text("Enter another place: ")
+                TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                Button(action: {self.createDestination()}) {
+                    Text("Add to list")
+                }
+                Spacer()
+            }
+                
             Spacer()
             
         }
     }
     
     func createDestination() -> Void{
+        
         
     }
     
