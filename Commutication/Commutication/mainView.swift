@@ -21,17 +21,13 @@ struct mainView: View {
                 Text("Time")
             }.padding(15)
             
-            List {
-                
-                HStack{
-                    Text("Class1")
-                    Spacer()
-                    Text("Hickman Hall")
-                    Spacer()
-                    Text("5:00")
-                }.font(.body)
-                
+            List(Data){ instance in
+                Text(instance.name)
+                Spacer()
+                Text(instance.time)
             }
+            
+            MapView().border(Color.green, width: 4)
                 
         }
     }

@@ -17,7 +17,8 @@ struct ContentView: View {
                     .font(.title)
                     .bold()
                     .foregroundColor(.green)
-                Image("logo")
+                    Image("logo")
+                        .foregroundColor(.green)
                     
                 }
                 TabView {
@@ -25,7 +26,8 @@ struct ContentView: View {
                         .tabItem {
                             Image("home")
                             Text("Home")
-                        }
+                            
+                    }
                     statsView()
                         .tabItem {
                             Image("bike")

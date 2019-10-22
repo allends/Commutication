@@ -17,27 +17,24 @@ struct dest: Identifiable {
 
 struct destinationView: View {
     
-    var test : Bool = false
     
     func createDestination() -> Void{
-        print("This works")
-        //test = true
+        Data.append(Dest(id: 4, name: "Politics", location: "Poly Sci Lecture Hall", time: "2:40"))
     }
     
     
     var body: some View {
         
         VStack{
-            Text("You have places to go!").font(.headline)
+            Text("All the places you have to go!")
+                .font(.headline)
+            
             Spacer()
             
-            List{
-                Text("Destination").font(.headline)
-                Text("Placeholder 1")
-                Text("Placeholder 2")
-                if(test){
-                    Text("You just entered some text")
-                }
+            List(Data){ instance in
+                Text(instance.name)
+                Spacer()
+                Text(instance.time)
             }
                 
             HStack{
