@@ -20,27 +20,23 @@ struct destinationView: View {
     
     func createDestination() -> Void{
         Data.append(Dest(id: 4, name: "Politics", location: "Poly Sci Lecture Hall", time: "2:40"))
+        print(Data)
     }
-    
     
     var body: some View {
         
         VStack{
-            Text("All the places you have to go!")
-                .font(.headline)
-            
-            Spacer()
-            
-            List(Data){ instance in
-                Text(instance.name)
-                Spacer()
-                Text(instance.time)
+                NavigationView{
+                List(Data){ instance in
+                    Text(instance.name)
+                    Spacer()
+                    Text(instance.time)
+                }.navigationBarTitle("All your places")
             }
-                
             HStack{
                 Text("Add Places")
                 Button(action: { self.createDestination() }) {
-                    Text("GO")
+                    Text("Fill out a new form")
                 }
             }.padding()
                 
