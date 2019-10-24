@@ -10,17 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
             VStack{
-                HStack{
-                Text("Commutication")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.green)
-                    Image("logo")
-                        .foregroundColor(.green)
-                    
-                }
+                Text("Commutication").font(.headline)
                 TabView {
                     mainView()
                         .tabItem {
@@ -33,13 +24,12 @@ struct ContentView: View {
                             Image("bike")
                             Text("Stats")
                         }
-                    destinationView()
+                    classFiller()
                         .tabItem {
                             Image("nav")
                             Text("Destinations")
                         }
                 }
-                .font(.headline)
             }
         
     }
