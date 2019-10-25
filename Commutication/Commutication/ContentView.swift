@@ -17,6 +17,7 @@ struct location: Identifiable {
 }
 
 struct ContentView: View {
+<<<<<<< HEAD
     
     
     @State var buttonCounter = 1
@@ -75,7 +76,39 @@ struct ContentView: View {
                         Spacer()
                         Text(temp.time)
                     }
+=======
+    var body: some View {
+        
+            VStack{
+                HStack{
+                Text("Commutication")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.green)
+                    Image("logo")
+                        .foregroundColor(.green)
+                    
                 }
+                TabView {
+                    mainView()
+                        .tabItem {
+                            Image("home")
+                            Text("Home")
+                            
+                    }
+                    statsView()
+                        .tabItem {
+                            Image("bike")
+                            Text("Stats")
+                        }
+                    destinationView()
+                        .tabItem {
+                            Image("nav")
+                            Text("Destinations")
+                        }
+>>>>>>> parent of 99b0e49... epic change in views
+                }
+                .font(.headline)
             }
         }.navigationBarTitle("All your Places")
     }
