@@ -14,12 +14,7 @@
 		9F415158235CCAC900FB5FF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F415157235CCAC900FB5FF2 /* Preview Assets.xcassets */; };
 		9F41515B235CCAC900FB5FF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F415159235CCAC900FB5FF2 /* LaunchScreen.storyboard */; };
 		9F415166235CCACA00FB5FF2 /* CommuticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F415165235CCACA00FB5FF2 /* CommuticationTests.swift */; };
-		9F415171235D54AC00FB5FF2 /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F415170235D54AC00FB5FF2 /* mainView.swift */; };
-		9F415173235D54D700FB5FF2 /* statsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F415172235D54D700FB5FF2 /* statsView.swift */; };
-		9F415177235E759900FB5FF2 /* destData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F415176235E759900FB5FF2 /* destData.swift */; };
 		9F415179235E79C500FB5FF2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F415178235E79C500FB5FF2 /* MapView.swift */; };
-		9F41517B235F66BA00FB5FF2 /* destForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F41517A235F66BA00FB5FF2 /* destForm.swift */; };
-		9F4151AB23620DE800FB5FF2 /* classFiller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4151AA23620DE800FB5FF2 /* classFiller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,12 +39,7 @@
 		9F415161235CCACA00FB5FF2 /* CommuticationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommuticationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F415165235CCACA00FB5FF2 /* CommuticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommuticationTests.swift; sourceTree = "<group>"; };
 		9F415167235CCACA00FB5FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F415170235D54AC00FB5FF2 /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
-		9F415172235D54D700FB5FF2 /* statsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statsView.swift; sourceTree = "<group>"; };
-		9F415176235E759900FB5FF2 /* destData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = destData.swift; sourceTree = "<group>"; };
 		9F415178235E79C500FB5FF2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		9F41517A235F66BA00FB5FF2 /* destForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = destForm.swift; sourceTree = "<group>"; };
-		9F4151AA23620DE800FB5FF2 /* classFiller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classFiller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,16 +84,11 @@
 				9F41514E235CCAC900FB5FF2 /* AppDelegate.swift */,
 				9F415150235CCAC900FB5FF2 /* SceneDelegate.swift */,
 				9F415152235CCAC900FB5FF2 /* ContentView.swift */,
-				9F4151AA23620DE800FB5FF2 /* classFiller.swift */,
-				9F41517A235F66BA00FB5FF2 /* destForm.swift */,
-				9F415172235D54D700FB5FF2 /* statsView.swift */,
-				9F415170235D54AC00FB5FF2 /* mainView.swift */,
 				9F415178235E79C500FB5FF2 /* MapView.swift */,
 				9F415154235CCAC900FB5FF2 /* Assets.xcassets */,
 				9F415159235CCAC900FB5FF2 /* LaunchScreen.storyboard */,
 				9F41515C235CCACA00FB5FF2 /* Info.plist */,
 				9F415156235CCAC900FB5FF2 /* Preview Content */,
-				9F415176235E759900FB5FF2 /* destData.swift */,
 			);
 			path = Commutication;
 			sourceTree = "<group>";
@@ -228,13 +213,8 @@
 			files = (
 				9F41514F235CCAC900FB5FF2 /* AppDelegate.swift in Sources */,
 				9F415179235E79C500FB5FF2 /* MapView.swift in Sources */,
-				9F415171235D54AC00FB5FF2 /* mainView.swift in Sources */,
-				9F415177235E759900FB5FF2 /* destData.swift in Sources */,
-				9F4151AB23620DE800FB5FF2 /* classFiller.swift in Sources */,
 				9F415151235CCAC900FB5FF2 /* SceneDelegate.swift in Sources */,
 				9F415153235CCAC900FB5FF2 /* ContentView.swift in Sources */,
-				9F41517B235F66BA00FB5FF2 /* destForm.swift in Sources */,
-				9F415173235D54D700FB5FF2 /* statsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
