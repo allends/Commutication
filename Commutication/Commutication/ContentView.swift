@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Commutication
 //
-//  Created by Allen Davis-Swing on 10/20/19.
+//  Created by Allen Davis-Swing on 10/25/19.
 //  Copyright © 2019 Allen Davis-Swing. All rights reserved.
 //
 
@@ -17,7 +17,6 @@ struct location: Identifiable {
 }
 
 struct ContentView: View {
-<<<<<<< HEAD
     
     
     @State var buttonCounter = 1
@@ -34,26 +33,28 @@ struct ContentView: View {
     
     
     var homePage: some View{
-        NavigationView{
-            VStack{
-                HStack{
-                    Text("Class")
-                    Spacer()
-                    Text("Location")
-                    Spacer()
-                    Text("Time")
-                }.padding(15)
+        VStack{
+            NavigationView{
+                VStack{
+                    HStack{
+                        Text("Class")
+                        Spacer()
+                        Text("Location")
+                        Spacer()
+                        Text("Time")
+                    }.padding(15)
+                    
+                    List(locArray){ temp in
+                        Text(temp.name)
+                        Spacer()
+                        Text(temp.time)
+                    }
+                }.navigationBarTitle("Today View")
                 
-                List(locArray){ temp in
-                    Text(temp.name)
-                    Spacer()
-                    Text(temp.time)
-                }
-                
-                MapView()
-                
-            }.navigationBarTitle("Today View")
+            }
+            MapView()
         }
+        
     }
     
     var statsPage: some View{
@@ -61,59 +62,26 @@ struct ContentView: View {
     }
     
     var destinationPage: some View{
-    NavigationView{
-        Form{
-            TextField("Enter name of class here", text: $name)
-            TextField("Enter location of class here", text: $place)
-            TextField("Enter time of class here", text: $time)
-            Button(action: { self.addToArray() } ) {
-                Text("Add to Class List")
-            }
-            Section{
-                List(locArray){ temp in
-                    HStack{
-                        Text(temp.name)
-                        Spacer()
-                        Text(temp.time)
-                    }
-=======
-    var body: some View {
-        
-            VStack{
-                HStack{
-                Text("Commutication")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.green)
-                    Image("logo")
-                        .foregroundColor(.green)
-                    
+        NavigationView{
+            Form{
+                TextField("Enter name of class here", text: $name)
+                TextField("Enter location of class here", text: $place)
+                TextField("Enter time of class here", text: $time)
+                Button(action: { self.addToArray() } ) {
+                    Text("Add to Class List")
                 }
-                TabView {
-                    mainView()
-                        .tabItem {
-                            Image("home")
-                            Text("Home")
-                            
+                Section{
+                    List(locArray){ temp in
+                        HStack{
+                            Text(temp.name)
+                            Spacer()
+                            Text(temp.time)
+                        }
                     }
-                    statsView()
-                        .tabItem {
-                            Image("bike")
-                            Text("Stats")
-                        }
-                    destinationView()
-                        .tabItem {
-                            Image("nav")
-                            Text("Destinations")
-                        }
->>>>>>> parent of 99b0e49... epic change in views
                 }
-                .font(.headline)
             }
-        }.navigationBarTitle("All your Places")
+        }
     }
-    }
-    
     var body: some View {
         VStack{
             TabView {
@@ -132,6 +100,7 @@ struct ContentView: View {
                         Image("nav")
                         Text("Destinations")
                 }
+                .font(.headline)
             }
         }
         
@@ -143,5 +112,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-
