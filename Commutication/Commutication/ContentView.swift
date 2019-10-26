@@ -18,17 +18,18 @@ struct location: Identifiable {
 
 struct ContentView: View {
     
-    
     @State var buttonCounter = 1
     @State var name = ""
     @State var place = ""
     @State var time = ""
     @State var locArray = [location(id: 0 , name: "Math", place: "Math Lecture Hall", time: "8:00")]
+    @State var statsArray = [10, 15]
     
     func addToArray(){
         print(locArray)
         locArray.append(location(id: buttonCounter, name: name, place: place, time: time ))
         buttonCounter += 1
+        statsArray[0] += 20
     }
     
     
@@ -42,15 +43,20 @@ struct ContentView: View {
                         Text("Location")
                         Spacer()
                         Text("Time")
-                    }.padding(15)
+                        }.padding(15)
                     
                     List(locArray){ temp in
-                        Text(temp.name)
-                        Spacer()
-                        Text(temp.time)
+                        
+                        NavigationLink(destination: detailedView(thisLoc: temp)) {
+                            Text(temp.name)
+                            Spacer()
+                            Text(temp.place)
+                            Spacer()
+                            Text(temp.time)
+                        }.lineLimit(1)
+                        
                     }
                 }.navigationBarTitle("Today View")
-                
             }
             MapView()
         }
@@ -58,7 +64,30 @@ struct ContentView: View {
     }
     
     var statsPage: some View{
-        Text("Your weekly and lifetime stats will all be held here in time").padding()
+        NavigationView{
+            VStack{
+                HStack{
+                    Text("Distance Traveled Green")
+                    Spacer()
+                    Text("Turtles Saved")
+                }
+                .padding()
+                .font(.headline)
+                
+                HStack (alignment: .center){
+                    
+                    Text("\(statsArray[0])")
+                    Spacer()
+                    Text("\(statsArray[1])")
+                    
+                }.padding().font(.subheadline)
+                Spacer()
+                
+    
+            }.navigationBarTitle("Cool Stats")
+            
+            
+        }
     }
     
     var destinationPage: some View{
@@ -67,6 +96,7 @@ struct ContentView: View {
                 TextField("Enter name of class here", text: $name)
                 TextField("Enter location of class here", text: $place)
                 TextField("Enter time of class here", text: $time)
+                
                 Button(action: { self.addToArray() } ) {
                     Text("Add to Class List")
                 }
@@ -109,6 +139,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().statsPage
     }
 }
