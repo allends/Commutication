@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '13.1'
+# platform :ios, '9.0'
 
 target 'Commutication' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,13 +7,11 @@ target 'Commutication' do
 
   # Pods for Commutication
 
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+
   target 'CommuticationTests' do
     inherit! :search_paths
-    # add the Firebase pod for Google Analytics
-    use_frameworks! # this allows you to use import Firebase
-    pod 'Firebase', '>= 2.5.0'
-    # add pods for any other desired Firebase products
-    # https://firebase.google.com/docs/ios/setup#available-pods
     # Pods for testing
   end
 
