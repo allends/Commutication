@@ -79,7 +79,7 @@ struct ContentView: View {
                         }
                     }
                 }
-            }
+            }.navigationBarTitle("All your places")
         }
     }
     var body: some View {

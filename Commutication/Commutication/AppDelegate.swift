@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Pods_Commutication
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
